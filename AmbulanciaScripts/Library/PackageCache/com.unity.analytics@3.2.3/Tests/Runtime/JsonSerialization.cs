@@ -18,7 +18,7 @@ public class JsonSerialization
     public void TestTokenStruct_JsonUtility()
     {
         var tokenData = JsonUtility.FromJson<DataPrivacy.TokenData>(kTokenJson);
-        Assert.AreEqual("https://analytics.cloud.unity3d.com/optout?token=24a96770b5c4420a4f930dbb4b72fbb83erfg3edf3ert4r1/", tokenData.url);
-        Assert.AreEqual("24a96770b5c4420a4f930dbb4b72fbb83erfg3edf3ert4r1", tokenData.token);
+        Assert.AreEqual("https://analytics.cloud.unity3d.com/optout?token=/", tokenData.url);
+        Assert.AreEqual("", tokenData.token);
     }
 }
